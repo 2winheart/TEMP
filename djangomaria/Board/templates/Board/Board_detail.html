@@ -1,0 +1,18 @@
+{% extends 'Board/base.html' %}
+
+{% block content %}
+
+<div>
+<h3>{{ listB.title }}</h3>
+<p>{{ listB.memo }}</p>
+</div>
+
+<table style="width: 100%; ">
+<tr>
+<td><a href="{% url 'Board_list' %}"><h3 style="text-align: left;">List</h3></a></td>
+<td><a href="{% url 'Board_edit' pk=listB.pk %}"><h3 style="text-align: center;">Edit</h3></a></td>
+<td><a href="{% url 'Board_delete' pk=listB.pk %}"><h3 style="text-align: right;">Delete</h3></a></td>
+</tr>
+</table>
+
+{% endblock content %}

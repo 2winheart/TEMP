@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<html>
+<head>
+<title>※공사구역※</title>
+<link rel="stylesheet" href="{% static 'css/board.css' %}">
+</head>
+<body>
+
+<div class="page-header">
+<a href="{% url 'Board_list' %}"><h1> ※공사구역※ </h1></a>
+</div>
+
+<div class="page-body">
+{% block content %}
+{% endblock %}
+
+</div>
+
+</body>
+</html>

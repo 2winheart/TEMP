@@ -1,0 +1,23 @@
+{% extends 'Board/base.html' %}
+
+{% block content %}
+<h3>Free Board</h3>
+<table class="board">
+<tr>
+	<th style="width:40px;">Index</th>
+<th style="width:80px;">Writer</th>
+<th>Title</th>
+<th style="width:100px;">Date</th>
+</tr>
+{% for Board in listA %}
+<tr>
+	<td>{{ Board.id }}</td>
+	<td>{{ Board.name }}</td>
+	<td><a href="{% url 'Board_detail' pk=Board.pk %}">{{ Board.title }}</a></td>
+	<td>{{ Board.created_date }}</td>
+</tr>
+{% endfor %}
+</table>
+<a href="{% url 'Board_create' %}"><h3>New</h3></a>
+{% endblock content %}
+
